@@ -33,8 +33,8 @@
 4. 不允许输入特殊字符
 
 效果图：
-![巴西](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/brazil_edit_text.gif)
-![澳洲](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/australia_edit_text.gif)
+![brazil](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/brazil_edit_text.gif)
+![australia](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/australia_edit_text.gif)
 #### 实现方案
 自定义文本输入框，支持按国家配置不同的限制策略，通过多种InputFilter，实现对文本的限制。
 
@@ -45,11 +45,14 @@
 4. 小数点过滤器
 
 工作流程图：
-![-w549](media/15985195291971/15985266248957.jpg)
+![image](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/filter.png)
 
 几个注意点：
 
-1.过滤器无法实现对已输入文字的编辑。如果想对已经输入的文字进行变更，在不使用`ontextchangedlistener`的前提下，只能持有`edittext`的引用
-2.`setText`时，会出发所有过滤器
-3.不能使用`InputType.TYPE_CLASS_NUMBER` 或`InputType.TYPE_NUMBER_FLAG_DECIMAL`，因为允许用户输入特殊字符`,`,同时又必须默认数字键盘，所以需要使用
-4.针对连续输入`000`时，这样处理：如果小数位不为0，在第二个0前面，自动拼接小数点；否则不允许输入第二个0
+1. 过滤器无法实现对已输入文字的编辑。如果想对已经输入的文字进行变更，在不使用`ontextchangedlistener`的前提下，只能持有`edittext`的引用
+
+2. `setText`时，会出发所有过滤器
+
+3. 不能使用`InputType.TYPE_CLASS_NUMBER` 或`InputType.TYPE_NUMBER_FLAG_DECIMAL`，因为允许用户输入特殊字符`,`,同时又必须默认数字键盘，所以需要使用
+
+4. 针对连续输入`000`时，这样处理：如果小数位不为0，在第二个0前面，自动拼接小数点；否则不允许输入第二个0
