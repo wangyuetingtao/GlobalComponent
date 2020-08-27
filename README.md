@@ -21,7 +21,9 @@
 > 货币格式化尽量放到服务端处理，端上仅做展示，但有些场景又绕不过去，比如需要对货币做动画
 
 可以参考 [GlobalAnimateTextView](https://github.com/wangyuetingtao/GlobalComponent/blob/master/app/src/main/java/com/wyttlb/globalcomponent/text/GlobalAnimateTextView.java) 组件，格式化核心使用`Java`的`NumberFormat`类，滚动动画使用属性动画中的自定义估值器，原理参见：
+
 效果如下：
+
 ![巴西](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/brazil_text.gif)
 ![澳洲](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/australia_text.gif)
 
@@ -33,8 +35,10 @@
 4. 不允许输入特殊字符
 
 效果图：
+
 ![brazil](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/brazil_edit_text.gif)
 ![australia](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/australia_edit_text.gif)
+
 #### 实现方案
 自定义文本输入框，支持按国家配置不同的限制策略，通过多种InputFilter，实现对文本的限制。
 
@@ -45,7 +49,9 @@
 4. 小数点过滤器
 
 工作流程图：
+
 ![image](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/filter.png)
+
 
 几个注意点：
 
