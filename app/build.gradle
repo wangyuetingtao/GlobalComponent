@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.wyttlb.globalcomponent"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "lang"
+
+    productFlavors {
+        australia {
+            buildConfigField 'String', 'LANG', '"en-AU"'
+            buildConfigField 'String[]', 'SUPPORTED_LANGS', '{"en-AU", "en-US"}'
+            dimension "lang"
+        }
+        latin {
+            buildConfigField 'String', 'LANG', '"es-MX"'
+            buildConfigField 'String[]', 'SUPPORTED_LANGS', '{"es-MX", "es-CL", "es-CO"}'
+            dimension "lang"
+        }
+        brazil {
+            buildConfigField 'String', 'LANG', '"pt-BR"'
+            buildConfigField 'String[]', 'SUPPORTED_LANGS', '{LANG}'
+            dimension "lang"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+}
+repositories {
+    mavenCentral()
+}

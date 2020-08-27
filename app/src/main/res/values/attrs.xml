@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GlobalAnimateTextView">
+        <!--动画时间-->
+        <attr name="duration" format="integer"></attr>
+        <!--最小的数，小于这个数字没有动画，默认0.1-->
+        <attr name="minNum" format="float"></attr>
+        <!--动画开始的数字-->
+        <attr name="numStart" format="float"></attr>
+        <!--动画结束的数-->
+        <attr name="numEnd" format="float"></attr>
+        <!--前缀-->
+        <attr name="prefixString" format="string|reference"></attr>
+        <!--后缀-->
+        <attr name="postfixString" format="string|reference"></attr>
+        <!--是否使用动画-->
+        <attr name="isEnableAnim" format="boolean"></attr>
+        <!--是否当内容改变当时候使用动画，不改变则不使用动画-->
+        <attr name="runWhenChange" format="boolean"></attr>
+        <!--是否使用千分位分隔符格式化数字-->
+        <attr name="groupingUsed" format="boolean"></attr>
+    </declare-styleable>
+</resources>
