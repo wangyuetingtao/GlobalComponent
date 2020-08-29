@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnGoTextShow;
     Button btnGoTextEdit;
-
+    Button btnGoTimePicker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private void init() {
         btnGoTextShow = findViewById(R.id.btn_text);
         btnGoTextEdit = findViewById(R.id.btn_edit_text);
+        btnGoTimePicker = findViewById(R.id.btn_time_picker);
 
         btnGoTextShow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, GlobalEditTextActivity.class));
+            }
+        });
+
+        btnGoTimePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, GlobalTimePickerActivity.class));
             }
         });
     }
