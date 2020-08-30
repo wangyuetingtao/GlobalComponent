@@ -68,13 +68,13 @@
 提升性能：
 效果如图：
 
-![image](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/time_range_picker.png)
+![image](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/time_range_picker.gif)
 
 功能：
- * 自动筛选过去的时间
- * 支持配置最早和最晚时间，精度支持到分钟
+ * 自动筛选时间范围外的时间
+ * 支持配置最早和最晚时间，精度到分钟
  * 支持配置分钟间隔，幕布颜色，字体字号等
  * 提升性能：一次滚动即使导致多个时间变化，也仅触发一次OnTimeSelectedListener回调
 
-
+> 详情参见Demo
 
