@@ -59,7 +59,7 @@
 
 2. `setText`时，会出发所有过滤器
 
-3. 不能使用`InputType.TYPE_CLASS_NUMBER` 或`InputType.TYPE_NUMBER_FLAG_DECIMAL`，因为允许用户输入特殊字符`,`,同时又必须默认数字键盘，所以需要使用
+3. 不能使用`InputType.TYPE_CLASS_NUMBER` 或`InputType.TYPE_NUMBER_FLAG_DECIMAL`，因为允许用户输入特殊字符`,`,同时又必须默认数字键盘，所以需要使用`setRawInputType(Configuration.KEYBOARD_QWERTY);`
 
 4. 针对连续输入`000`时，这样处理：如果小数位不为0，在第二个0前面，自动拼接小数点；否则不允许输入第二个0
 
