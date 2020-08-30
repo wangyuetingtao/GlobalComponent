@@ -22,7 +22,7 @@
 
 可以参考 [GlobalAnimateTextView](https://github.com/wangyuetingtao/GlobalComponent/blob/master/app/src/main/java/com/wyttlb/globalcomponent/text/GlobalAnimateTextView.java) 组件，格式化核心使用`Java`的`NumberFormat`类，滚动动画使用属性动画中的自定义估值器，原理参见：
 
-效果如下：
+效果如下
 
 ![巴西](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/brazil_text.gif)
 ![澳洲](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/australia_text.gif)
@@ -65,7 +65,8 @@
 
 ## 时间范围选择组件
 
-提升性能：
+时间范围选择器在时间边界上比较容易出问题，抽空撸了一个。
+
 效果如图：
 
 ![image](https://github.com/wangyuetingtao/GlobalComponent/blob/master/screenshot/time_range_picker.gif)
@@ -73,7 +74,7 @@
 功能：
  * 自动筛选时间范围外的时间
  * 支持配置最早和最晚时间，精度到分钟
- * 支持配置分钟间隔，幕布颜色，字体字号等
+ * 支持配置分钟间隔，幕布文字边框等颜色，字体字号
  * 提升性能：一次滚动即使导致多个时间变化，也仅触发一次OnTimeSelectedListener回调
 
 > 详情参见Demo
