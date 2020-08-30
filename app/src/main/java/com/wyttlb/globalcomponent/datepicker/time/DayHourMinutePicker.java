@@ -66,19 +66,19 @@ public class DayHourMinutePicker extends LinearLayout implements
             //处理最早时间
             if(day.getDay() == earlistDay) {
                 mHourPicker.setBeginHourInDay(earlistHour < mTimeStrategy.getBeginHourInDay() ? mTimeStrategy.getBeginHourInDay() : earlistHour);
+                mHourPicker.setEndHourInDay(mTimeStrategy.getEndHourInDay());
 
-                if (mHourPicker.getSelectedHour() == earlistHour) {
+                if (mHourPicker.getSelectedHour() <= earlistHour) {
                     mMinutePicker.setBeginMinuteInHour(earlistMinute);
                 } else {
                     mMinutePicker.setBeginMinuteInHour(MinutePicker.sBeginMinuteInHour);
-                    mMinutePicker.setEndMinuteInHour(MinutePicker.sEndMinuteInHour);
                 }
             } else {
                mHourPicker.setBeginHourInDay(mTimeStrategy.getBeginHourInDay());
                mHourPicker.setEndHourInDay(mTimeStrategy.getEndHourInDay());
                mMinutePicker.setBeginMinuteInHour(MinutePicker.sBeginMinuteInHour);
-               mMinutePicker.setEndMinuteInHour(MinutePicker.sEndMinuteInHour);
             }
+            mMinutePicker.setEndMinuteInHour(MinutePicker.sEndMinuteInHour);
 
             ///
             Calendar lastestCalendar = Calendar.getInstance();

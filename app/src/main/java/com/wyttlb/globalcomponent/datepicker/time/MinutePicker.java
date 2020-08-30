@@ -99,6 +99,8 @@ public class MinutePicker extends WheelPicker<Integer> {
     }
 
     public void setSelectedMinute(int selectedMinute, boolean smoothScroll) {
+        //找不到默认选第一个
+        //TODO 待优化为：找最近的一个delta刻度，比如分钟间隔5分钟，给的是37，可以锚到40
         if (getDataList().indexOf(selectedMinute) < 0) {
             mSelectedMinute = getDataList().get(0);
         } else {
